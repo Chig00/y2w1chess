@@ -11,7 +11,7 @@ public class Rook extends ChessPiece {
         availableMoves.clear();
         
         for (int i = horizontal - 1; i >= 0; --i) {
-            ChessPiece piece = (board.pieceAtLocation(vertical, i));
+            ChessPiece piece = board.pieceAtLocation(vertical, i);
             
             if (piece == null) {
                 availableMoves.add(new Move(this, vertical, i, false));
@@ -27,7 +27,7 @@ public class Rook extends ChessPiece {
         }
         
         for (int i = horizontal + 1; i < 8; ++i) {
-            ChessPiece piece = (board.pieceAtLocation(vertical, i));
+            ChessPiece piece = board.pieceAtLocation(vertical, i);
             
             if (piece == null) {
                 availableMoves.add(new Move(this, vertical, i, false));
@@ -43,7 +43,7 @@ public class Rook extends ChessPiece {
         }
         
         for (int i = vertical - 1; i >= 0; --i) {
-            ChessPiece piece = (board.pieceAtLocation(i, horizontal));
+            ChessPiece piece = board.pieceAtLocation(i, horizontal);
             
             if (piece == null) {
                 availableMoves.add(new Move(this, i, horizontal, false));
@@ -59,7 +59,7 @@ public class Rook extends ChessPiece {
         }
         
         for (int i = vertical + 1; i < 8; ++i) {
-            ChessPiece piece = (board.pieceAtLocation(i, horizontal));
+            ChessPiece piece = board.pieceAtLocation(i, horizontal);
             
             if (piece == null) {
                 availableMoves.add(new Move(this, i, horizontal, false));
